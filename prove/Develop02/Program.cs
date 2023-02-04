@@ -5,6 +5,11 @@ class Program
 {
     static void Main(string[] args)
     {   
+
+        //This program meets the main requirements. It also exceeds expectations by providing an inspirational quote.
+        //Lots of people struggle with journaling because It's hard to see the value in it. 
+        //The quote from Elder Anderson gives a good reason to journal and will help the user get motivated.
+
         int Quit = 0;
         List<string> entries = new List<string>();
         do
