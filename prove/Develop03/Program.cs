@@ -27,7 +27,7 @@ class Program
         Console.WriteLine();
         Console.WriteLine("enter 1 to remove letters");
         Console.WriteLine("enter 2 to test your knowledge.");
-        Console.WriteLine("enter 3 to quit");
+        Console.WriteLine("enter 'quit' to quit");
         Console.Write("Put your response here: ");
         answer = Console.ReadLine();
         
@@ -39,7 +39,7 @@ class Program
         {
             testTrial.RecieveAndGrade();
         }
-        if (answer == "3")
+        if (answer == "quit")
         {
             break;
         }
@@ -74,37 +74,37 @@ class Program
 
     class MemoryHelper
     {
-        private List<int> _IndexList = new List<int>();
-        private string _HiddenWord;
+        private List<int> _indexList = new List<int>();
+        private string _hiddenWord;
 
         
         private int RemoveWords(List<string> scriptText)
         {
-            Random __Rand1 = new Random();
-            int __RandIndex = __Rand1.Next(0, scriptText.Count());
-            return __RandIndex;
+            Random __rand1 = new Random();
+            int __randIndex = __rand1.Next(0, scriptText.Count());
+            return __randIndex;
             
         }
 
         private string ReplaceLetters(string word){
-            string _Underscores = "";
+            string _underscores = "";
             foreach (char letter in word){
-                _Underscores += "_";
+                _underscores += "_";
             }
-            return _Underscores;
+            return _underscores;
         }
 
         public void HandleDisplay(int indexCounter, List<string> scripText, string scripReference)
         {
-            _IndexList.Add(RemoveWords(scripText));
+            _indexList.Add(RemoveWords(scripText));
             Console.WriteLine();
             Console.WriteLine(scripReference);
             Console.WriteLine();
             foreach (string word in scripText){
             
-            if (_IndexList.Contains(indexCounter)){
-                _HiddenWord = ReplaceLetters(word);
-                Console.Write(_HiddenWord + " ");
+            if (_indexList.Contains(indexCounter)){
+                _hiddenWord = ReplaceLetters(word);
+                Console.Write(_hiddenWord + " ");
             }
             else
             {
@@ -121,25 +121,25 @@ class Program
 
     class Test
     {
-        private Scripture _TestScrip = new Scripture();
+        private Scripture _testScrip = new Scripture();
         
-        private string _TestCase;
-        private int _Score = 0;
+        private string _testCase;
+        private int _score = 0;
 
         public void RecieveAndGrade()
         {
-            List<string> _TestScripText = _TestScrip.GetScripture();
-            foreach (string word in _TestScripText)
+            List<string> _testScripText = _testScrip.GetScripture();
+            foreach (string word in _testScripText)
             {
                 Console.WriteLine("Type the next word here and press enter: ");
-                _TestCase = Console.ReadLine();
-                if (_TestCase == word)
+                _testCase = Console.ReadLine();
+                if (_testCase == word)
                 {
-                    _Score += 1;
+                    _score += 1;
                 }
             }
             
-            Console.WriteLine($"Final Score: {_Score}/{_TestScripText.Count()}");
+            Console.WriteLine($"Final Score: {_score}/{_testScripText.Count()}");
             
             
         }
