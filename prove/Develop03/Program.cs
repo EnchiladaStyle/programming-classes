@@ -1,5 +1,8 @@
 using System;
 
+//This program meets all the requirements by displaying a scripture and hiding words.
+//This program exceeds requirements by testing the user's memory and displaying a score.
+
 class Program
 {
     static void Main(string[] args)
