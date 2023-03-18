@@ -1,7 +1,7 @@
 using System;
 
-// This program meets all the requirements provided in the assignment description. It also exceeds the requirements in several ways.
-// It qualifies for extra credit because it incorporates polymorphism. The Activity class defines an abstract welcome function that is used in each child class.
+// This program is being resubmitted an place of the polymorphism project because we are doing that one together in class.
+// I made some changes to it, mainly the classes are separated into individual files.
 // It Exceeded requirements by ensuring that a question in the reflecting activity won't repeat itself untill all other questions are displayed.
 // It also exceded requirements by giving the user the ability to end the program, which was not specified by the instructions. 
 
