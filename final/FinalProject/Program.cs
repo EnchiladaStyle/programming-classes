@@ -14,19 +14,19 @@ class Program
         private int _balance = 0;
         private int _dept = 0;
 
-        public void setUsername(int username)
+        public void setUsername(string username)
         {
             _username = username;
         }
 
-        public void setPassword(int password)
+        public void setPassword(string password)
         {
             _password = password;
         }
 
         public void displayBalance()
         {
-            Console.Writeline(balance);
+            Console.WriteLine(_balance);
         }
 
         public virtual void displayDept()
@@ -53,9 +53,9 @@ class Program
 
     public class Child : Account 
     {
-        public override displayDept()
+        public override void displayDept()
         {
-            Console.WriteLine('You are not permitted to take out loans.');
+            
         }
     }
 
