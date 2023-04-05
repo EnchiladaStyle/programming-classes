@@ -2,14 +2,17 @@ public class Banker : Account
     {
         
 
-        public void readReviews(List<string> reviews)
+        public void ReadReviews(List<string> reviews)
         {
-            Console.WriteLine();
+            Console.Clear();
+            
             foreach (string review in reviews)
             {
                 Console.WriteLine(review);
                 Console.WriteLine();
             }
+            Console.WriteLine("\npress enter to continue");
+            Console.ReadLine();
             
         }
     }

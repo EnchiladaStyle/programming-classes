@@ -1,8 +1,15 @@
 public class Customer : Account
     {
-        public string writeReview()
+        private string _feedback;
+        public string WriteReview()
         {
+            Console.Clear();
             Console.WriteLine("Please write your review here: ");
-            return Console.ReadLine();
+            _feedback = Console.ReadLine();
+            Console.WriteLine("\nThank you for your feedback\npress enter to continue");
+            Console.ReadLine();
+            Console.Clear();
+
+            return _feedback;
         }
     }
